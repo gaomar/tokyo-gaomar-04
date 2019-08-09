@@ -304,7 +304,7 @@ module.exports.callMessageAction = async function callMessageAction(message) {
       </google-codelab-step>
     
       <google-codelab-step label="enebularでフローを作成しよう！" duration="0">
-        <h2 is-upgraded>5-1. enebularプロジェクトを作成する</h2>
+        <h2 is-upgraded>4-1. enebularプロジェクトを作成する</h2>
 <p>いよいよenebularを使ってClovaと繋いでいきます。<br>enebularのページにログインしてください。</p>
 <p><a href="https://enebular.com/sign-in" target="_blank">https://enebular.com/sign-in</a></p>
 <p>ログインしたら［Create Project］ボタンをクリックします。</p>
@@ -323,7 +323,7 @@ module.exports.callMessageAction = async function callMessageAction(message) {
 <p class="image-container"><img alt="s503" src="img/e5fcde5dce06b2c7.png"></p>
 <p>［Edit］ボタンをクリックして、Flow画面を表示します。</p>
 <p class="image-container"><img alt="s504" src="img/fa5278fbf10158ff.png"></p>
-<h2 is-upgraded>5-2. Flowを作成する</h2>
+<h2 is-upgraded>4-2. Flowを作成する</h2>
 <p>Flow画面を表示して、Clovaに発話させるフローを作成します。<br>左側メニューの「入力」カテゴリにある<code>http</code>ノードをエディタにドラッグアンドドロップします。</p>
 <p>ノードをクリックして、メソッドは<code>POST</code>を選択し、URLに<code>/clova</code>と入力します。</p>
 <p class="image-container"><img alt="s505" src="img/a653dc6d84f14c1a.png"></p>
@@ -368,14 +368,14 @@ return msg;
 <p class="image-container"><img alt="s510" src="img/a60fb882f1d84526.png"></p>
 <p><code>function</code>ノードと<code>http response</code>ノードを繋ぎます。</p>
 <p class="image-container"><img alt="s511" src="img/90dc58e5f8774482.png"></p>
-<h2 is-upgraded>5-3. Clovaと連携する</h2>
+<h2 is-upgraded>4-3. Clovaと連携する</h2>
 <p>画面右上の［デプロイ］ボタンをクリックして、デプロイを行います。</p>
 <p class="image-container"><img alt="s512" src="img/d0d8213637f5efb1.png"></p>
 <p>デプロイボタンの左にiボタンがあるのでクリックします。ポップアップで表示されるアクセスURLをメモしておきます。</p>
 <p class="image-container"><img alt="s513" src="img/43d61024d3d1f938.png"></p>
 <p>Clova Developer Centerページを開きます。左側メニューの開発設定にある［サーバー設定］をクリックします。<br>サーバーURLに先程メモしたURLを貼り付けて、その末尾に<code>/clova</code>を追加します。</p>
 <p class="image-container"><img alt="s514" src="img/bd54a3e8a7f0774.png"></p>
-<h2 is-upgraded>5-4. シミュレーターで確認する</h2>
+<h2 is-upgraded>4-4. シミュレーターで確認する</h2>
 <p>Clova Developer Centerページのテストをクリックします。<br>シナリオテストに切り替えて、［○○を起動して］ボタンをクリックします。すると、enebularで設定した値が返ってきます。</p>
 <p class="image-container"><img alt="s515" src="img/c6bebaab8b1dad2c.png"></p>
 
@@ -383,7 +383,7 @@ return msg;
       </google-codelab-step>
     
       <google-codelab-step label="BMI測定に対応しよう！" duration="0">
-        <h2 is-upgraded>6-1. セッションの受け渡し</h2>
+        <h2 is-upgraded>5-1. セッションの受け渡し</h2>
 <p>身長と体重を答えさせて、結果を発話する流れを作っていきます。<br>セッションを使って、身長データを一時的に保持して、次に来る体重の数値を使って計算してBMIを求めていきます。</p>
 <p>まず、LaunchRequestの発話を「エネブラーからこんにちは！」から「BMIを測定するよ！身長を教えてね！」に変更します。</p>
 <pre><code>msg.payload =
@@ -495,7 +495,7 @@ return msg;
 <p class="image-container"><img alt="s607" src="img/ac933f83ac435db.png"></p>
 <p>出力カテゴリにある<code>http response</code>ノードをドラッグアンドドロップし、ノードを繋ぎます。</p>
 <p class="image-container"><img alt="s608" src="img/aed2953c1f39bc3e.png"></p>
-<h2 is-upgraded>6-2. 体重を聞き出す</h2>
+<h2 is-upgraded>5-2. 体重を聞き出す</h2>
 <p>身長のセッションがまだ格納されていない場合は値を一旦変数に格納しておきます。<br>機能カテゴリにある<code>change</code>ノードをドラッグアンドドロップし、線で繋ぎます。<br>ノードをクリックして、変数に格納していきます。</p>
 <table>
 <tr></tr>
@@ -536,7 +536,7 @@ return msg;
 <p class="image-container"><img alt="s610" src="img/f1e564f9fa758ef.png"></p>
 <p>出力カテゴリにある<code>http response</code>ノードをドラッグアンドドロップし、ノードを繋ぎます。</p>
 <p class="image-container"><img alt="s611" src="img/8754851f00b31f17.png"></p>
-<h2 is-upgraded>6-3. スキル終了に対応する</h2>
+<h2 is-upgraded>5-3. スキル終了に対応する</h2>
 <p>機能カテゴリの<code>functions</code>ノードをドラッグアンドドロップし、ノードを繋ぎます。<br>ノードをクリックして、コードを入力します。<br>16行目の<code>shouldEndSession</code>がtrueだと会話が終わり、スキルを終了することができるようになります。</p>
 <pre><code>msg.payload =
 {
@@ -561,7 +561,7 @@ return msg;
 <p class="image-container"><img alt="s612" src="img/63b6baaf932c4137.png"></p>
 <p>出力カテゴリにある<code>http response</code>ノードをドラッグアンドドロップし、ノードを繋ぎます。</p>
 <p class="image-container"><img alt="s613" src="img/c8570457fb8cd05f.png"></p>
-<h2 is-upgraded>6-4. デプロイする</h2>
+<h2 is-upgraded>5-4. デプロイする</h2>
 <p>全体の図は以下の通りです。全てのノードが繋がっているか確認して、<br>デプロイボタンをクリックしてください。</p>
 <p class="image-container"><img alt="s614" src="img/27a12772ed59f659.png"></p>
 <p>デプロイが終われば、シミュレーターでテストしてみましょう。<br>身長と体重を入力するとBMIが返ってきます。</p>
@@ -571,7 +571,7 @@ return msg;
       </google-codelab-step>
     
       <google-codelab-step label="Amazon Connectから結果を聞こう！" duration="0">
-        <h2 is-upgraded>7-1. Amazon Connectから結果を聞く</h2>
+        <h2 is-upgraded>6-1. Amazon Connectから結果を聞く</h2>
 <p>BMIの結果をAmazon Connectから電話で知らせてもらいましょう。</p>
 <p>機能カテゴリの<code>http request</code>ノードをドラッグアンドドロップし、ノードを繋ぎます。</p>
 <table>
